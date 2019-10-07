@@ -1,11 +1,11 @@
-FROM ubuntu:16.04
+FROM dorowu/ubuntu-desktop-lxde-vnc:bionic
 
 MAINTAINER Bo Gao (bogao@dcs.warwick.ac.uk)
 LABEL Description="Dockerised Simulation of Urban MObility(SUMO)"
 
 ENV SUMO_VERSION 0.31.0
 ENV SUMO_HOME /opt/sumo
-ENV SUMO_USER your_username
+ENV SUMO_USER sumo_user
 
 # Install system dependencies.
 RUN apt-get update && apt-get -qq install \
